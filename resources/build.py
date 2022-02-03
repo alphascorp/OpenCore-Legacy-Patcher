@@ -197,6 +197,9 @@ class BuildOpenCore:
                 # Applicable for pre-Ivy Bridge models
                 self.enable_kext("CatalinaBCM5701Ethernet.kext", self.constants.bcm570_version, self.constants.bcm570_path)
 
+        print("- Adding experimental I210 Kext")
+        self.enable_kext("CtlnaIntelI210Ethernet.kext", self.constants.i210_catalina, self.constants.i210_cat_path)
+
         # i3 Ivy Bridge iMacs don't support RDRAND
         # However for prebuilt, assume they do
         if (not self.constants.custom_model and "RDRAND" not in self.computer.cpu.flags) or \
