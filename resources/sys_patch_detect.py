@@ -155,7 +155,7 @@ class detect_root_patch:
                     self.legacy_gmux = True
         
         self.root_patch_dict = {
-            "Graphics: Nvidia Tesla": self.nvidia_legacy,
+            "Graphics: Nvidia Tesla": False,
             "Graphics: Nvidia Kepler": self.kepler_gpu,
             "Graphics: AMD TeraScale 1": self.amd_ts1,
             "Graphics: AMD TeraScale 2": self.amd_ts2,
